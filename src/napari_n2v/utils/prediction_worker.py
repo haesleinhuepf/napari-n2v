@@ -19,11 +19,9 @@ from napari_n2v.utils import (
     load_model
 )
 
-from napari_tools_menu import register_function
 from napari_time_slicer import time_slicer
 
 
-@register_function(menu="Filtering / noise removal > Apply N2V denoiser")
 @time_slicer
 def apply_n2v(image: "napari.types.ImageData",
               model_filename: PathLike = "my_n2v_model",
